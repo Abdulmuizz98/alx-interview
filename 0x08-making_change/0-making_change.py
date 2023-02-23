@@ -6,8 +6,10 @@
 def makeChange(coins, total):
     """Fewest number of denominations to make total
     """
+    if total < 1:
+        return 0
     coins.sort()
-    coins.reverse()# reverse
+    coins.reverse()
 
     count = 0
     for i in coins:
