@@ -25,6 +25,11 @@ def isWinner(x, nums):
 
         - Ben wins because there are no prime numbers for Maria to choose
     """
+    if type(x) != int and type(nums) != list:
+        return None
+    if x <= 0 or len(nums) < 1:
+        return None
+
     m, b = 0, 0
     for round in range(x):
         draws = range(1, nums[round] + 1)
