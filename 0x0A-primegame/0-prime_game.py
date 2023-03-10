@@ -25,6 +25,8 @@ def isWinner(x, nums):
 
         - Ben wins because there are no prime numbers for Maria to choose
     """
+    if x <= 0:
+        return None
     m, b = 0, 0
     nums = nums[0:x]  # accomodate only playable rounds
     hash = [i for i in range(1, max(nums) + 1) if isPrime(i)]
