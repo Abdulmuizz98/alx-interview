@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# This module has been duly documented
 """
     script that reads stdin line by line and computes metrics:
 
@@ -22,6 +21,7 @@
 """
 
 if __name__ == '__main__':
+    """ This module has been duly documented. this is not too much """
     import sys
     import re
 
