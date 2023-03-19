@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+"""Script that parses HTTP error logs 
+    for 'GET \/projects\/260 HTTP\/1\.1'
+"""
+
 import sys
 import re
 
