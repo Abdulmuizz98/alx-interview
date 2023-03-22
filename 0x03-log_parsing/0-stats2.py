@@ -21,9 +21,9 @@ if __name__ == '__main__':
                 [print('{}: {}'.format(
                        k, v)) for k, v in sorted(count.items()) if v]
 
-            # first = r'\d+\.\d+\.\d+\.\d+ - \[.*\]'
-            reg_fmt = r'"GET \/projects\/260 HTTP\/1\.1" .* \d+$'
-            # reg_fmt = '{} {}'.format(first, second)
+            first = r'\d+\.\d+\.\d+\.\d+ - \[.*\]'
+            second = r'"GET \/projects\/260 HTTP\/1\.1" \d+ \d+'
+            reg_fmt = '{} {}'.format(first, second)
             reg_stcode = r'(?<=" ).*?(?= \d)'
             reg_filesz = r'\d+$'
 
@@ -32,8 +32,7 @@ if __name__ == '__main__':
                 match_stcode = re.findall(reg_stcode, line)  # get size
                 if match_stcode and match_stcode[0] in count:
                     count[match_stcode[0]] += 1
-
-                file_size += int(re.findall(reg_filesz, line)[0])
+                    file_size += int(re.findall(reg_filesz, line)[0])
 
             line_count += 1
 
