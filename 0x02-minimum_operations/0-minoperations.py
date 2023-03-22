@@ -9,6 +9,8 @@ def minOperations(n):
         calculates the fewest number of operations
         needed to result in exactly n H characters in the file.
     """
+    if n < 2:
+        return 0
     return sum(primeFactors(n))
 
 
